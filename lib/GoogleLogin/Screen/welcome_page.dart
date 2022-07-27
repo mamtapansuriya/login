@@ -38,7 +38,8 @@ class WelcomePage extends StatelessWidget {
                 _loginController.googleSignIn.currentUser!.email.toString(),
                 style: const TextStyle(fontWeight: FontWeight.bold, color: Colors.black),
               ),
-              Text(_loginController.googleSignIn.currentUser!.id.toString())
+              Text(_loginController.googleSignIn.currentUser!.id.toString()),
+              const Text("change for testing push code in new branch")
             ],
           ),
         ),
