@@ -12,14 +12,14 @@ class WelcomePage extends StatelessWidget {
     return SafeArea(
         child: Scaffold(
       appBar: AppBar(
-        title: Text("Welcome Page"),
+        title: const Text("Welcome to Google Login"),
         actions: [
           RaisedButton(
             onPressed: () {
               _loginController.googleSignIn.signOut();
               Get.back();
             },
-            child: Text("Log Out"),
+            child: const Text("Sign Out"),
           )
         ],
       ),

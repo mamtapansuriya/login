@@ -5,7 +5,6 @@ import 'package:google_sign_in/google_sign_in.dart';
 import 'package:googlesignin_without_firebase/Routs/app_routs.dart';
 
 class GoogleLoginController extends GetxController {
-  //late final result;
   GoogleSignIn googleSignIn = GoogleSignIn();
   Future<void> googleLogin() async {
     try {

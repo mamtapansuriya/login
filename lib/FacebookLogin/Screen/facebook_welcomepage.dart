@@ -5,18 +5,18 @@ import 'package:sizer/sizer.dart';
 
 class FacebookWelcome extends StatelessWidget {
   FacebookWelcome({Key? key}) : super(key: key);
-  FacebookContoller _facebookContoller = Get.put(FacebookContoller());
+  final FacebookContoller _facebookController = Get.put(FacebookContoller());
   @override
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
       appBar: AppBar(
-        title: Text(_facebookContoller.userData['name'] ?? "Welcome to Facebook Login"),
+        title: Text(_facebookController.userData['name'] ?? "Welcome to Facebook Login"),
         centerTitle: true,
         actions: [
           RaisedButton(
             onPressed: () {
-              _facebookContoller.facebookAuth.logOut();
+              _facebookController.facebookAuth.logOut();
               Get.back();
             },
             child: const Text("LogOut"),
@@ -32,14 +32,14 @@ class FacebookWelcome extends StatelessWidget {
               children: [
                 CircleAvatar(
                   radius: 15.w,
-                  backgroundImage: NetworkImage(_facebookContoller.userData['picture']['data']['url'] ??
+                  backgroundImage: NetworkImage(_facebookController.userData['picture']['data']['url'] ??
                       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkbYw73-X3jsq5RY-o2BpqIVTuf7aH4DDCXg&usqp=CAU"),
                 ),
                 Text(
-                  _facebookContoller.userData['name'].toString(),
+                  _facebookController.userData['name'].toString(),
                   style: const TextStyle(fontWeight: FontWeight.bold, color: Colors.black),
                 ),
-                Text(_facebookContoller.userData["email"].toString())
+                Text(_facebookController.userData["email"].toString())
               ],
             ),
           ),
