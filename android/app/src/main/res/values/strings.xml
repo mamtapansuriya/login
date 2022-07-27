@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">logindemo</string>
+    <string name="facebook_app_id">2007566086111725</string>
+    <string name="facebook_client_token">b641e0eacf3a5c228242862ad5beed49</string>
+</resources>
